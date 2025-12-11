@@ -7,7 +7,6 @@
 
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -29,8 +28,10 @@
     <section class="hero" id="top">
       <div class="hero-inner">
         <h1 class="hero-title">Hi, I'm <span class="name">hamza laksouri</span>!</h1>
-        <td class="hero-sub">I am a visual communicator specializing in high-impact poster and graphic design. My passion lies in creating evocative visual narratives through digital manipulation, merging photography, bold typography, and cinematic lighting. I pay close attention to composition and color theory to capture energy, emotion, or cultural iconography, aiming to turn simple concepts into memorable, striking visual experiences.</td>
-          <p class="hero-sub">Scroll down to see more</p>
+        <td class="hero-sub">
+          I am a visual communicator specializing in high-impact poster and graphic design. My passion is in creating evocative visual narratives through digital manipulation, merging photography, bold typography, and cinematic lighting. I pay close attention to composition and color theory to capture energy, emotion, or cultural iconography, aiming to turn simple concepts into memorable, striking visual experiences.
+        </td>
+        <p class="hero-sub">Scroll down to see more</p>
         <button id="arrow" class="scroll-arrow" aria-label="Scroll down">⌄</button>
       </div>
     </section>
@@ -38,21 +39,26 @@
     <!-- Projects / Work -->
     <section id="work" class="work">
       <div class="projects-grid">
-        <!-- Project card 1 -->
+
+        <!-- Poster 1 -->
         <article class="project-card">
           <div class="project-media">
-            <img src="images/emptiness%20copy.jpg" alt="emptiness cover" />
+            <img src="images/emptiness copy.jpg" alt="Emptiness"
+                 data-title="Emptiness"
+                 data-desc="Continuing my emotional poster series, this piece captures the essence of 'Emptiness.' It is a minimalist yet intense portrait where the text serves as a psychological label, contrasting stark light and shadow to amplify the feeling of internal desolation." />
             <div class="project-overlay">
-              <div class="project-tag">emptiness</div>
+              <div class="project-tag">Emptiness</div>
               <div class="project-year">2025</div>
             </div>
           </div>
         </article>
 
-        <!-- Project card 2 -->
+        <!-- Poster 2 -->
         <article class="project-card">
           <div class="project-media">
-            <img src="images/falling%20copy.jpg" alt="falling cover" />
+            <img src="images/falling copy.jpg" alt="Falling"
+                 data-title="Falling"
+                 data-desc="Abstract digital graphic design mixing high-contrast elements with surreal imagery. The central glowing figure and contrasting textual questions ('I feel like i'm falling' / 'why do you feel that way?') create a narrative of internal conflict and descent." />
             <div class="project-overlay">
               <div class="project-tag">Falling</div>
               <div class="project-year">2025</div>
@@ -60,40 +66,55 @@
           </div>
         </article>
 
-        <!-- Project card 3 -->
+        <!-- Poster 3 -->
         <article class="project-card">
           <div class="project-media">
-            <img src="images/pedri%20potter%20copy_page-0001.jpg" alt="pedri poster" />
+            <img src="images/pedri potter copy_page-0001.jpg" alt="Pedri Potter"
+                 data-title="Pedri Potter"
+                 data-desc="This poster features a high-impact color palette, utilizing red-to-magenta gradients to make the subject pop. The large, clean typography and integration of the FCB crest create a strong, modern visual identity for the young talent." />
             <div class="project-overlay">
-              <div class="project-tag">pedri potter</div>
+              <div class="project-tag">Pedri Potter</div>
               <div class="project-year">2025</div>
             </div>
           </div>
         </article>
 
-        <!-- Project card 4 -->
+        <!-- Poster 4 -->
         <article class="project-card">
           <div class="project-media">
-            <img src="images/SADNESS%20POSTER%20copy_page-0001.jpg" alt="sadness" />
+            <img src="images/SADNESS POSTER copy_page-0001.jpg" alt="Sadness"
+                 data-title="Sadness"
+                 data-desc="A deeply monochromatic study in sadness, utilizing dramatic, high-contrast chiaroscuro lighting to explore intense emotion. The word 'SADNESS' is vertically integrated, casting a cool, somber glow over the subject’s shadowed profile to visualize an internal struggle." />
             <div class="project-overlay">
-              <div class="project-tag">SADNESS</div>
+              <div class="project-tag">Sadness</div>
               <div class="project-year">2025</div>
             </div>
           </div>
         </article>
+
       </div>
     </section>
 
     <section id="contact" class="contact">
       <h2>Contact me to see more of my work</h2>
-      <p>email: <a href="mailto:your.email@example.com">hamzalaksouri18@gmail.com</a></p>
+      <p>email: <a href="mailto:hamzalaksouri18@gmail.com">hamzalaksouri18@gmail.com</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <small>© <span id="year"></span> hamza laksouri</small>
+    <small>©️ <span id="year"></span> hamza laksouri</small>
   </footer>
 
+  <!-- 🔥 POPUP / MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// Smooth scroll from hero arrow to work section and small interactions
+// Smooth scroll, year, and card reveal
 document.addEventListener('DOMContentLoaded', function () {
   const arrow = document.getElementById('arrow');
   const work = document.getElementById('work');
@@ -27,4 +27,26 @@ document.addEventListener('DOMContentLoaded', function () {
     c.style.transition = 'transform .6s cubic-bezier(.2,.9,.2,1), opacity .6s ease';
     obs.observe(c);
   });
+
+  // ---- POPUP / MODAL ----
+  const projectImages = document.querySelectorAll('.project-card img');
+
+  projectImages.forEach(img => {
+    img.addEventListener('click', () => {
+      const title = img.dataset.title;
+      const desc = img.dataset.desc;
+      openModal(title, desc);
+    });
+  });
 });
+
+// Modal functions
+function openModal(title, desc) {
+  document.getElementById("modal-title").innerText = title;
+  document.getElementById("modal-desc").innerText = desc;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
